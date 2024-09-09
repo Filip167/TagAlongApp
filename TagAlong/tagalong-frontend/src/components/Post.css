@@ -1,0 +1,146 @@
+/* Post Container */
+.post-container {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Header */
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-user-info {
+  display: flex;
+  align-items: center;
+}
+
+.post-user-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+/* Post Description */
+.post-description {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Post Map */
+.feed-post-map {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* Distance and Time Info */
+.distance-time-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Like Section */
+.like-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.like-section button {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Delete Icon */
+.delete-icon {
+  cursor: pointer;
+  color: red;
+  font-size: 20px;
+}
+
+/* Comments Container */
+.comments-container {
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+}
+
+.comment-user {
+  font-weight: bold;
+}
+
+.comment-text {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.comment-delete {
+  cursor: pointer;
+  color: red;
+  margin-left: 10px;
+}
+
+.add-comment-container {
+  display: flex;
+  align-items: center;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-right: 10px;
+}
+
+.comment-add-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.comment-add-button:hover {
+  background-color: #0056b3;
+}
+
+.post-username-link {
+  text-decoration: none;
+  color: black; /* Ensures the link remains black */
+}
+
+.post-username-link:hover {
+  text-decoration: none; /* No underline on hover */
+  color: black; /* Keeps the link black when hovered */
+}

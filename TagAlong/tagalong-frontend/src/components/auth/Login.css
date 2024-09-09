@@ -1,0 +1,153 @@
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 30px;
+  background: white; /* Ensure the background is white */
+}
+
+.login-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 400px; /* Set a maximum width for the form */
+  margin: 0 auto; /* Center the form */
+}
+
+.input-group {
+  margin-bottom: 10px; /* Reduce bottom margin */
+  width: 100%;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 3px; /* Reduce margin between label and input */
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 3px; /* Further reduce top margin of the input */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.options {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Reduce bottom margin */
+}
+
+.options label {
+  display: flex;
+  align-items: center;
+}
+
+.options a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+.login-button {
+  width: 100%;
+  padding: 12px;
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #218838;
+}
+
+p {
+  margin-top: 15px; /* Add some margin to separate from login button */
+}
+
+p .signup-link {
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px; /* Add margin to separate from login button */
+}
+
+p .signup-link:hover {
+  background-color: #0056b3;
+}
+
+.outermost-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 30px;
+  background: white; /* Ensure the background is white */
+}
+
+.inner-container {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.image-side, .form-side {
+  flex: 1;
+}
+
+.image-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.woman-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.form-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.login-signup-logo {
+  width: auto;
+  height: 150px; /* Adjust this value as needed for the desired size */
+  display: block;
+  margin: 0 auto;
+}
+
+.content-container {
+  width: 100%;
+  max-width: 400px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}

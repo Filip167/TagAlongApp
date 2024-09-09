@@ -1,0 +1,227 @@
+/* General Visit Homepage Layout */
+.visit-homepage-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding-top: 70px;
+}
+
+.visit-main-content {
+  display: flex;
+  flex: 1;
+  padding: 20px 0;
+  justify-content: space-between;
+}
+
+/* Common styling for profile, feed, and blank columns */
+.visit-profile-column, .visit-feed-column, .visit-blank-column {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  flex-grow: 1;
+  min-height: 100%;
+}
+
+/* Visit Profile Column */
+.visit-profile-column {
+  width: 30%; /* Adjusted for more focus on the visit feed column */
+  margin-right: 5px;
+}
+
+.visit-profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px; /* Reduced padding for the profile picture area */
+}
+
+.visit-profile-picture-placeholder {
+  width: 100%; /* Ensure the picture takes up the full width */
+  max-width: 250px; /* Limit the maximum width to reduce space */
+  height: 250px;
+  border-radius: 10px;
+  background-color: #ffcccc;
+  margin-bottom: 15px;
+  border: 2px solid #ff6347;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.visit-profile-picture-placeholder-text {
+  color: #ff6347;
+  font-size: 16px;
+  text-align: center;
+}
+
+.visit-profile-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.visit-profile-username {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.visit-follow-button,
+.visit-unfollow-button {
+  padding: 8px 16px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  max-width: 200px;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.visit-follow-button:hover {
+  background-color: #ff4500;
+}
+
+.visit-unfollow-button {
+  background-color: black;
+}
+
+.visit-unfollow-button:hover {
+  background-color: #333333;
+}
+
+/* Visit Feed Column */
+.visit-feed-column {
+  width: 60%; /* Increased width to give more focus to the visit feed */
+  margin: 0 10px;
+}
+
+.visit-feed-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+}
+
+.visit-feed-post-container {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.visit-feed-post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.visit-feed-post-user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.visit-feed-post-username {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.visit-delete-icon {
+  cursor: pointer;
+  color: red;
+  margin-left: auto;
+}
+
+.visit-feed-post-description {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.visit-feed-post-map {
+  width: 100%;
+  height: 300px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.visit-feed-post-actions {
+  display: flex;
+  align-items: center;
+}
+
+.visit-feed-post-actions .like-icon,
+.visit-feed-post-actions .comment-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.visit-feed-post-actions .like-icon svg,
+.visit-feed-post-actions .comment-icon svg {
+  margin-right: 5px;
+}
+
+.visit-comment-section {
+  margin-top: 20px;
+}
+
+.visit-comment-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.visit-comment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.visit-comment .visit-delete-icon {
+  cursor: pointer;
+  color: red;
+}
+
+.visit-distance-time-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Blank Column to maintain layout */
+.visit-blank-column {
+  width: 30%; /* This can be adjusted or filled with other content later */
+  margin-left: 5px;
+}
