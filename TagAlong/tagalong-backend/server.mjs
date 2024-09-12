@@ -5,6 +5,8 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch'; // Import node-fetch for making external API calls
 import routes from './routes/routes.js';
+import path from 'path'; // For handling file paths
+import { fileURLToPath } from 'url'; // To resolve __dirname in ES modules
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -32,20 +34,13 @@ mongoose.connect(process.env.MONGODB_URI, {
 // Use routes from the routes folder
 app.use('/api', routes);
 
-// Test route for server status
-app.get('/', (req, res) => {
-  res.send('Welcome to the TagAlong API');
-});
-
 // Directions API endpoint to fetch Google Maps Directions
 app.post('/api/directions', async (req, res) => {
   const { origin, destination, mode } = req.body;
 
   try {
-    // Fetch directions data from Google Maps API
     const response = await fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${destination}&mode=${mode}&key=${process.env.GOOGLE_API_KEY}`);
     
-    // Check if the request was successful
     if (!response.ok) {
       throw new Error(`Failed to fetch directions: ${response.statusText}`);
     }
@@ -56,6 +51,18 @@ app.post('/api/directions', async (req, res) => {
     console.error('Error fetching directions:', error);
     res.status(500).send('Error fetching directions');
   }
+});
+
+// Serve the React frontend from the build folder
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Serve static files from the React app build directory
+app.use(express.static(path.join(__dirname, '../tagalong-frontend/build')));
+
+// For any other route not handled by your API, serve the React app
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../tagalong-frontend/build/index.html'));
 });
 
 // Set the server to listen on the defined port
