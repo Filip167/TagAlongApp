@@ -1,0 +1,10 @@
+{
+  "build": {
+    "builder": "nixpacks",
+    "build_dir": "tagalong-backend",
+    "cmd": "npm install && npm run build"
+  },
+  "start": {
+    "cmd": "npm start"
+  }
+}
